@@ -1,0 +1,103 @@
+body{
+    margin: 0% 15%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+}
+
+header{
+    color: #fff;
+    width: 100%;
+    background-color: #483d8b ;
+    padding: 5px 6px;
+    display: grid;
+    /* grid-template-columns: 30% 70% ;  */
+}
+main{
+    display: grid;
+    /* border: 1px solid black; */
+    box-shadow: 0px  0px 7px rgb(126, 126, 126) inset;
+    width: 100%;
+    padding: 6px;
+}
+
+strong{
+    font-size: 23px;
+}
+
+.image-stat, li.alumne {
+    border: 1px solid #6a5acd;
+    
+}
+
+.lista{
+    list-style: none;
+    margin:0px;
+    padding: 0;
+    width: 360px;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+}
+.alumne{
+    margin:0;
+}
+
+.title{
+    font-size: 17px;
+}
+
+section{
+    margin:50px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+
+.grid-container-stats{
+    display: grid;
+    grid-template-rows: 80%  30px 20px;
+    margin:19px;
+}
+
+.image-stat{
+    /* size: 100%; */
+    width: 500px;
+    height: 500px;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////777*/
+/*//////////////////////////////////////////////////////////////////////777*/
+/*//////////////////////////////////////////////////////////////////////777*/
+
+aside{
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+}
+.alumne{
+    background-color: #f2f2f2 ;
+    padding:15px;
+ 
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 20px;
+    /* grid-row-gap: 20px; */
+}
+
+.alumne  img{
+    width: 100px;
+    height: 100px;
+
+    
+}
+
+.title-student{
+    font-size: 30px;
+}

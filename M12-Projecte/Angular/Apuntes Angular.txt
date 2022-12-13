@@ -1,0 +1,42 @@
+Angula es un framework SPA (Single Page App)
+
+Angular --> Typescrip <--llenguatje tipat
+
+Bindings
+
+	Property binding   <--
+
+	event binding - lo assinga el html i lo gestiona el ts -->
+
+	String interllation <--
+
+[(ngModel)] (property= value)+(event = onchange)  <-->
+
+Directivas 
+
+	*ngIf
+	*ngFor
+	[(ngModel)]
+
+<div *ngIf="condicion"> "En caso que se cumplala condicion capturara el DOM"
+
+<div *ngFor="..."> si se cumple la condicion generara tantos divs como lo indica la condicion.
+
+
+
+Creació de componets
+
+-Creació d'una propietat.
+És un atribut del component que té el decorador @Input()
+
+
+-Creació d'un event.
+És un coponent de tipus Eventemiter
+i que té el decorador @Output()
+
+
+
+
+
+
+

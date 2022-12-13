@@ -1,0 +1,34 @@
+Crear nuevo proyecto --> ng new 
+
+Conectarse al servidor --> ng serve --> localhost:4200
+
+
+
+
+Apuntes:
+
+BINDING
+
+	1 String interpollation
+		TS -> name --> html <<name>>
+
+	2 Event binding
+		Asociar/Unir
+
+	3 Property binding
+		TS -> idName --> html [id]="idModul";
+
+
+DIRECTIVES
+
+	[(ngModule)] --> Formularis
+		TS <--> HTML
+
+	--> import: FormModule
+
+		ngFor <---- modifica el DOM
+		ngIf  <--|
+
+
+
+

@@ -1,0 +1,34 @@
+
+.grid-container{
+    width: 100%;
+    height: 300px;
+    background-color: #ff6347;
+    /* margin-top: 100px; */
+    padding-top: 100px;
+
+
+    display: grid;
+    grid-template-columns: 45% 25% 30% ;
+    grid-template-rows:     75% 25%  ;
+    /* justify-content: flex-end; */
+
+    
+    grid-column-gap: 1px;
+    grid-row-gap: 2px;
+    
+    
+}
+
+/* .grid-container div:nth-child(1){
+    grid-row-start: 2 ;
+} */
+
+div{
+    text-align: center;
+    /* grid-area: 2 / 1 / 4 / 4; */
+    margin: 3px;
+    background-color: #ffe0da;
+
+
+}
+

@@ -1,0 +1,9 @@
+p::selection{
+    background-color:rgb(238, 12, 12); 
+    color:rgb(219, 219, 72);
+}
+
+p:hover{
+    
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), pointer; /* He de posar el pointer al final ja que Opera no soporta la funcio url(); */
+}

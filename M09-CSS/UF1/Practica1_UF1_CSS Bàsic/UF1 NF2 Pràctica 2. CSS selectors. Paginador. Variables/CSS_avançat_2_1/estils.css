@@ -1,0 +1,67 @@
+:root{
+
+    /* exterior */
+    --margenes: 30px;
+
+
+    /* posicionamiento o estilos elementos */
+    --relleno: 20px;
+    --margenes_porElemento:0px;
+    --tamaño-ancho:0px;
+    --tamaño-largo:0px;
+    --sombras: 0 5px 6px -3px rgb(82, 82, 82);
+    
+    /* fondos  */
+    --fondo_seleccionado : #29bc37;
+    --fondo_hover: #dddddd;
+
+    /* bordes */
+    --radio_bordes : 0px;
+    --color_bordes:1px solid #b3b3b3;
+
+
+    /* texto */
+    --decoracion_texto: none;
+    --color-texto:black;
+    --color-texto-seleccionado:white;
+    --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --tamaño-texto:10px ;
+
+}
+
+
+
+a{
+    padding: var(--relleno);
+    border: var(--color_bordes);
+    font-family: var(--fuente);
+    text-decoration: none;
+    border-radius: var(--radio_bordes);
+    margin: var(--margenes_porElemento);
+    color: var(--color-texto);
+    margin-right: 0%;
+
+    width: var(--tamaño-ancho) ;
+    height: var(--tamaño-largo) ;
+    box-shadow:var(--sombras);
+
+    font-size: var(--tamaño-texto);
+
+}
+
+a:hover{
+    background-color: var(--fondo_hover);
+    
+}
+a:focus{
+    background-color: var(--fondo_seleccionado);
+    color: var(--color-texto-seleccionado);
+}
+
+
+
+.pagination{
+    /* border: var(--color_bordes); */
+   margin: var(--margenes);
+   display:inline-block;
+}

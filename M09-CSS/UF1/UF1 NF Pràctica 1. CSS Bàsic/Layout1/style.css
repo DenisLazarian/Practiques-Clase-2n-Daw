@@ -1,0 +1,34 @@
+
+body{
+    background-color: #add8e6;
+    min-width: 1000px;
+    min-height: 1000px;
+}
+
+
+.contenedor{
+    margin:5% 20% 20% 20%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+    border-style: solid;
+    border-color:  #0f13fc;
+}
+
+/* .img-hamburguesa{
+    text-align: right;
+} */
+
+.texto p{
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.img{
+    float: right;
+    padding: 0px 0px 0px 20px;
+    
+}
+
+
+

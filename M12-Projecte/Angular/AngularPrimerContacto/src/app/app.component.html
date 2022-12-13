@@ -1,0 +1,24 @@
+<h1> {{ title }} </h1>
+
+<label>Autor: {{ writeName() }}</label><br/>
+
+<button (click)="changeAuthor();">Canviar autor</button><br/>
+
+<div [id]="idName">
+  He tocat {{ counter }} vegades el botó
+</div>
+
+<div *ngIf="name == 'Flix'">
+  MP06, MP07, MP09 i MP12
+</div>
+
+<label>Assignatures de 2n</label>
+<ul>
+  <li *ngFor="let sbj of subjects"> {{ sbj }} </li>
+</ul>
+
+<input type="text" [(ngModel)]="food" placeholder="Introdueix el teu plat preferit"/>
+
+<div>
+  El teu plat preferit és {{ food }}
+</div>

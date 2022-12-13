@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Crono {
+            constructor(divid) {
+                this.parentDiv = divid; // ID del DIV que contindrà la nostra aplicació
+
+                var container = document.getElementById(divid); // objecte HTML on inserir la nostra aplicació
+
+                // creació de la interficie
+                var btn = document.createElement("button"); // creem el botó
+
+                //Creem un node de tipus text per inserir el text dins del botó
+                //això funcionaria de forma similar al innerhtml 
+                //btn.innerHTML = "ADD"
+                var node = document.createTextNode("ADD");
+                btn.appendChild(node);
+
+                /* Aquest funció li diu al navegador que la funció actionButton, quan treballi amb el this
+                no serà el this de l'objecte que l'ha cridada (el this que crida és el botó), 
+                sinó el this actual (el this actual fa referència a l'objecte de la classe) */
+                this.actionButton = this.actionButton.bind(this);
+
+                // associem l'esdeveniment click a la funció actionbutton
+                btn.addEventListener("click", this.actionButton);
+
+                container.appendChild(btn); // afegim el botó a la jerarquia d'objectes
+            }
+
+            actionButton() {
+                alert("L'aplicació està configurada a " + this.parentDiv);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="cDiv"></div>
+    <script>
+        var crono = new Crono("cDiv");
+    </script>
+</body>
+
+</html>

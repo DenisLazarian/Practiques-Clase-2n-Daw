@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lista{
+            object-fit: cover;
+            object-position: center right;
+        }
+
+        button{
+            margin-left: 20px;
+            border-radius: 3px;
+        }
+        button:hover{
+            opacity: 0.60;
+            cursor: pointer;
+        }
+        .idClass{
+            display:none;
+        }
+
+        .background-modal{
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            position:absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            opacity: 0;
+        }
+
+        .modal{
+            font-family: monospace;
+            background-color: #fff;
+            margin: auto;
+            width: 500px;
+            height: 100px;
+            text-align: center;
+        }
+
+        /* .botonEditar{
+            opacity: 0;
+        }
+        
+        .botonBorrar{
+            opacity: 0;
+        } */
+        
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="background-modal" display=none>
+        <div class="modal">
+            <h4 id="errorMessaje"></h4>
+            <button class="confirm">OK</button>
+        </div>
+    </div>
+
+    <div>
+        Nom: <input type="text" id="inNom" placeholder="Escriu el nom"><br>
+        Cognom: <input type="text" id="inCognom" placeholder="Escriu el cognom"><br>
+        Telèfon: <input type="text" id="inTel" placeholder="Escriu el telèfon"><br>
+        Adreça: <input type="text" id="inAdreça" placeholder="Escriu el Adreça"><br>
+        Localitat: <input type="text" id="inLocalitat" placeholder="Escriu el Localitat"><br><br>
+        <input type="button" name="Añadir" id="add" value="Afegir">
+        <br>
+        <br>
+
+        <h2>Agenda</h2>
+
+        <input type="file">
+
+
+        <!-- </select> -->
+
+
+        <ul id="lista">
+            <select name="filtreNom" id="filtre">
+                <option value="default"  selected>Cercar per:</option>
+                <option value="0">Cercar per nom</option>
+                <option value="0">Cercar per telefon</option>
+                <option value="1">Cercar per Adreça</option>
+            </select> 
+            <input type="text" id="cercador-input">
+            <br>
+            <br>
+
+        </ul>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="agenda.js"></script>
+    
+</body>
+</html>

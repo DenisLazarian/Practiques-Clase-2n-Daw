@@ -1,0 +1,27 @@
+body{
+    margin: 40px
+}
+
+.llist{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border-style: none;
+}
+
+div{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    background-color: #e5e5e5;
+    text-align: center;
+    /* display: flex; */
+    /* flex-flow: column; */
+    width: 35%;
+    height: 280px;
+    margin: 10px;
+    border-radius: 5px;
+    border:1px solid #808080;
+}
+
+div h1{
+    color: #ff6347;
+}

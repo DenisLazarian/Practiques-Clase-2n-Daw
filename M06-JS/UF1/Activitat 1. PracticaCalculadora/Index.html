@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+
+    
+
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 5%;
+        }
+        .botton0{
+            width: 116px;
+        }
+       table, tr .interfaz{
+            border:  black 1px  solid;
+            border-collapse: collapse;
+
+        }
+        #parte-superior{
+            background-color: gray;
+        }
+
+        button:hover{
+            background-color: rgb(103, 103, 103);
+            color: white;
+            cursor: pointer;
+        }
+
+        button{
+            border:  black 1px  solid;
+            margin: 10px;
+            text-align: center;
+            font-size: 12px;
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+           
+        }
+
+        .encedido-apagado{
+            font-size: 6px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table class="interfaz">
+
+        
+            <tr id="parte-superior" class="interfaz container">
+                <td class="output"> 
+                    <!-- <input class="col-10 operacion" id="inOp" type="textfield" >  -->
+                    <!-- <input class="col-10 resultado" type="textfield" id="resultado" readonly> -->
+                   <input class = "display" type="text" id="resultado" placeholder="0" readonly>
+                    
+                </td> 
+               
+                
+    
+    
+            </tr>
+            <tr class="interfaz">
+    
+               <td>
+                <div class="container">
+    
+                    <div class="row">
+                        <button class="col-2 encendido-apagado">ON /OFF</button>
+                        <button name="data-borrar-todo" class="col-2" > C</button>
+                        <button name="data-borrar-ultimo" class="col-2"> CE </button>
+                        <button name="data-operador" class="col-2  " > &#47;</button>
+                    </div>
+                    <div class="row">
+                        <button name="data-numero" class="col-2  "> 7</button>
+                        <button name="data-numero" class="col-2  ">8</button>
+                        <button name="data-numero" class="col-2  "> 9 </button>
+                        <button name="data-operador" class="col-2  ">  &#120;</button>
+                    </div>
+                    <div class="row">
+                        <button name="data-numero" class="col-2  "> 4</button>
+                        <button name="data-numero" class="col-2  "> 5</button>
+                        <button name="data-numero" class="col-2  "> 6 </button>
+                        <button name="data-operador" class="col-2  ">  &#45; </button>
+                    </div>
+                    <div class="row">
+                        <button name="data-numero" class="col-2  "> 1</button>
+                        <button name="data-numero" class="col-2  "> 2</button>
+                        <button name="data-numero" class="col-2  "> 3 </button>
+                        <button name="data-operador" class="col-2  "> &#43;</button>
+                    </div>
+                    <div class="row">
+                        <button name="data-numero"class="col-5   botton0"> 0</button>
+                        <button name="operador-especial" class="col-2  "> &#43;&#47;&#45; </button>
+                        <button name="data-igual" class="col-2" >  &#61;</button>
+                    </div>
+                        
+    
+    
+    
+                    
+               
+                    </div>
+                
+               </td>
+               
+    
+            </tr>
+        
+        
+        
+        
+
+
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>

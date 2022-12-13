@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina registre</title>
+    <style>
+        body{
+            margin: 70px;
+        }
+        /*
+        #green{
+            background-color: rgb(20, 133, 20);
+            color: white;
+            margin: 20px;
+        } */
+        
+        /* #correcte{
+            background-color:green;
+            color: white;
+            margin: 20px;
+        }
+         */
+
+        input{
+            display: block;
+        }
+        .red{
+            background-color: rgb(250, 18, 18);
+            color: white;
+            margin: 20px;
+        }
+        .green{
+            background-color: rgb(20, 133, 20);
+            color: rgb(251, 240, 240);
+            margin: 20px;
+        }
+
+
+        #mensaje-de-validacion{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Pagina registre</h1>
+
+    <form name="formulario" method="POST">
+        Usuari: <input type="text" name="usuario" id="correo"> <br>
+        Password1: <input type="text" id="password1" ><br>
+        Password2: <input type="text" id="password2"><br>
+        <input type="submit" name="enviar" id="enviar" value="Registrar">
+    </form>
+        
+    <ul id="mensaje-de-validacion">
+        <!-- <div class ="eMail"></div>
+        <div class ="password1"></div>
+        <div class ="password2"></div> -->
+    </ul>
+
+    <script src="index.js"></script>
+</body>
+</html>

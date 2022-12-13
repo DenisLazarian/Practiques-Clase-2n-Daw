@@ -1,0 +1,39 @@
+
+
+<h1>{{ "Hola mundo"}}</h1>
+
+<label for="">Autor: {{name}}</label>
+
+<br>
+<br>
+
+<button (click)="changeAuthor()">Canviar autor</button>
+
+<!-- <p>He tocat {{counter}} vegades el botó</p> -->
+
+<div [id]="mydiv">He tocat el boto {{counter}} vegades</div>
+
+
+<input type="text" [(ngModel)]="food" placeholder="Introdueix el plat preferit">
+
+<div>
+  El teu plat preferit es el {{food}}
+</div>
+
+
+
+
+<div *ngIf="name == 'Denis'" >
+
+  MP06, MP07
+
+</div>
+
+<label>Assignatures de 2n</label>
+<ul>
+
+  <li ngFor='let sbj of subjects'>{{sbj}}</li>
+
+</ul>
+
+

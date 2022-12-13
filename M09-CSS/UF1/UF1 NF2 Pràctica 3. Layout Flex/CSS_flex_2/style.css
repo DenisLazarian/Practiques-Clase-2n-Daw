@@ -1,0 +1,41 @@
+
+.flex-container{
+    width: 100%;
+    display: flex;
+    flex-wrap:nowrap;
+    align-content: space-between;
+    /* max-width: 2334px;
+     */
+    /* flex: 1 1 auto; */
+    align-items: center;
+    align-content: space-between;
+}
+
+div{
+    padding: 20px;
+    border: 1px solid #ff0606;
+    text-align: center;
+    margin:1%;
+
+}
+
+.unTercio{
+
+    width: 35%;
+
+}
+
+.unMedio{
+    width: 50%;
+}
+
+.unQuarto{
+    width: 22.8%;
+}
+.unSexto{
+    width: 17%
+}
+
+.dosTercios{
+    width: 66.7%;
+}
