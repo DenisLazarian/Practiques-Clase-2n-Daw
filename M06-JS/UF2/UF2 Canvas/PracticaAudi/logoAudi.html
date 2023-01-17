@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="lienzo" width="500" height="200" style='border:1px solid black'>Su navegador no soporta canvas </canvas>
+
+    
+    <script>
+
+        window.onload = function(){
+            var lienzo = document.getElementById("lienzo");
+        
+
+            var X = lienzo.width/2;  
+            var Y = lienzo.height/2;  var r = 20;
+
+            
+            var desplazamiento      = -50;
+            var desplazamientoLinia = -50;  //  posició inicial
+
+            for (let i = 0; i < 4 ;i++) {   // Fiquem en un bucle per repetir el dibuix 4 vegades
+                var contexto = lienzo.getContext("2d"); // el fiquem al bucle per a que a cada repetició es crei la cercle
+                if (contexto) {
+                    contexto.strokeStyle = "#000044";
+                    contexto.fillStyle = "#fff";
+                    contexto.lineWidth = 3;
+                    contexto.beginPath(); //Al iniciar de nou la variable, que es crei un nou sub-path, en altres paraules, per cada cercle es treu el pinzell del lienzo.
+                    contexto.arc(X+desplazamiento,Y,r,0,2*Math.PI);
+
+                    contexto.stroke();
+
+                    desplazamiento += 30; // Desplaçament aproximat de 30 pixel
+                    
+                }
+            }
+
+            for (let i = 0; i < 4; i++) {   // Fiquem en un bucle per repetir el dibuix 4 vegades
+                var liniaVertical = lienzo.getContext("2d"); // el fiquem al bucle per a que a cada repetició es crei la linia
+
+                if(liniaVertical){
+                    liniaVertical.setLineDash([8, 7]);
+                    
+                    liniaVertical.beginPath();
+                    liniaVertical.moveTo(X+desplazamientoLinia, 0);
+                    liniaVertical.lineTo(X+desplazamientoLinia,lienzo.height);
+
+                    liniaVertical.lineWidth=0.7;
+                    liniaVertical.strokeStyle="#000044";
+
+
+                    liniaVertical.stroke();
+                    desplazamientoLinia += 30; 
+                }
+            }
+
+            var liniaHorizontal= lienzo.getContext("2d");
+
+            if(liniaHorizontal){
+                liniaVertical.setLineDash([5, 2]);
+                    
+                    liniaVertical.beginPath();
+                    liniaVertical.moveTo(0, Y);
+                    liniaVertical.lineTo(X*2, Y);
+
+                    liniaVertical.lineWidth = 0.7;
+                    liniaVertical.strokeStyle="#000044";
+
+                    liniaVertical.stroke();
+            }
+        }
+
+
+    
+    </script>
+    
+</body>
+</html>

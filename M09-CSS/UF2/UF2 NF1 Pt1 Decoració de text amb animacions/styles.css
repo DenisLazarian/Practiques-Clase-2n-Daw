@@ -1,0 +1,67 @@
+.article{
+    position:relative;
+}
+
+.professors{
+
+  display:flex;
+  justify-content: right;
+  padding: 20px;
+
+}
+
+*{
+    transition-property:transform;
+    transition-duration:3s; /*Fig que totes les animacions ocorrin en aquest rang de temps, si els noms després d'aver girat a 0.5 segons, al tornar a la seva posició inicial ho fara en 1.6 segons*/
+
+}
+
+.professors span{
+    justify-content: right;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.professors > span:hover {  /*Al fer un hover sobre els spans, faig una rotació de 180 graus als noms*/
+    transition-property:transform;
+    transition-duration:0.5s; /*Aixi faig que giri rapid només per aquest domini*/
+    transform: rotate(180deg);
+    
+}
+
+.barra{
+    float:right;
+    background-color: blue;
+    padding:50px;
+    height: 70%;
+    
+    position:absolute;
+    /* visibility: hidden;
+    transition: visibility 2s; */
+    transform:translate(-190px, 0); /*Estableixo un transallat negatiu per desplaçar la barra fora de la pantalla*/
+}
+
+
+
+
+.article:hover .barra{
+    
+    visibility: visible;
+    transform:translate(0, 0);  /*Aqui ho transllado per dins al fer hover sobre l'article*/
+}
+
+.barra:hover{
+    animation-name:changeColor; /* Aqui el que fara es canviar el color de fons en 5 segons quan el ratoli pasa per sobre de la barra*/
+    animation-duration:3s;  /*cada iteració dura 3 segons*/
+    animation-iteration-count: infinite; /*No hi ha limit de iteracions*/
+    animation-direction: alternate; /*El canvi de fons ho fa de forma alterna*/
+}
+
+@keyframes changeColor{ /* Aquest keyframe el que fa es mificar el color de forns */
+    0% {background-color: blue;}
+    25% {background-color: purple;}
+    50% {background-color: yellow;}
+    75% {background-color: green;}
+    100% {background-color: red;}
+}
+

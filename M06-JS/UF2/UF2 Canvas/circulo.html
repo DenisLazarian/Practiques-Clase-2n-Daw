@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="lienzo" width="250" height="200">Su navegador no soporta canvas Trist </canvas>
+
+    <script>
+        window.onload = function() {
+    // search canvas element
+        // var canvas = document.getElementById("Canvas1");
+
+
+            // if canvas exists && canvas has getContext method
+            var lienzo = document.getElementById("lienzo");
+            var contexto = lienzo.getContext("2d");
+            if (contexto) {
+                    var X = lienzo.width/2;
+                    var Y = lienzo.height/2;
+                    var r = 75;
+                    contexto.strokeStyle = "#006400";
+                    contexto.fillStyle = "#6ab150";
+                    contexto.lineWidth = 5;
+                    contexto.arc(X,Y,r,0,2*Math.PI);
+                    contexto.fill();
+                    contexto.stroke();
+            }
+        }
+    </script>
+    
+</body>
+</html>

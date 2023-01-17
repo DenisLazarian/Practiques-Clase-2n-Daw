@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <canvas id="arco" width="250px" height="250px">
+
+        
+    </canvas>
+
+    <script>
+        window.onload = function() {
+    // search canvas element
+        var elCanvas = document.getElementById("arco");
+        var context = elCanvas.getContext("2d");
+        if (context) {
+                var X = elCanvas.width/2;
+                var Y = 100;
+                var r = 70;
+                var aPartida = (Math.PI / 180) * 220;
+                var aFinal =  (Math.PI / 180) * 320;
+                context.strokeStyle = "orange";
+                context.lineWidth = 15;
+                context.arc(X,Y,r,0,2,false);
+                context.stroke();
+        }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lienzo{
+            border: solid 1px black;
+        }
+        #contenedor-crono{
+            width: 502px;
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 3px;
+            grid-row-gap: 0px;
+
+        }
+    </style>
+</head>
+<body>
+
+
+    <canvas id="lienzo" height="300" width="500">
+    </canvas>
+    <div id="contenedor-crono"><button id="start">Start</button><button id="stop">Stop</button><button id="reset">Reset</button></div>
+
+
+    <script>
+
+        
+
+
+        var canvas = document.getElementById("lienzo");
+
+        var contexto = lienzo.getContext("2d");
+
+        var tiempoInicial = "00:00";
+
+        drawCanvas();
+
+        function drawCanvas(){
+            if(contexto){
+                contexto.beginPath();
+
+                contexto.font = "90px Calibri";
+                contexto.textAlign = "center";
+
+                contexto.fillText(tiempoInicial, (canvas.width/2), ((canvas.height/2)-50)-2);
+
+                // contexto.clearRect(0, 0, canvas.width, canvas.height);
+                contexto.fillStyle ="#fff";
+                // contexto.
+                contexto.fillRect((canvas.width/2)-104, ((canvas.height/2)-50)+4, 210, 9);
+
+                contexto.fillStyle ="#787878";
+                contexto.translate((canvas.width/2), ((canvas.height/2)-50)+20);
+
+                contexto.scale(1, -1);
+                contexto.globalAlpha = 0.1;
+
+                contexto.fillText(tiempoInicial, 0, 0);
+                
+            }
+        }
+
+
+
+
+    </script>
+    
+
+</body>
+</html>

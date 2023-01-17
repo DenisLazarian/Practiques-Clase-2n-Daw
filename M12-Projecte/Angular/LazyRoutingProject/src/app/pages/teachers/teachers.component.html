@@ -1,0 +1,10 @@
+<h1>Teachers Component</h1>
+
+<ul>
+    <li *ngFor="let teacher of teachers; let idx = index"
+        [routerLink]="['/teachers', idx]">
+        {{ idx+1 }}. {{ teacher }}
+    </li>
+</ul>
+
+<button (click)="navigateToHome()">Anar a Home</button>

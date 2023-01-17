@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <canvas id="Canvas1" width="250px" height="250px">
+
+        
+    </canvas>
+
+    <script>
+        window.onload = function() {
+    // search canvas element
+        var canvas = document.getElementById("Canvas1");
+
+
+            // if canvas exists && canvas has getContext method
+            if (canvas && canvas.getContext) {
+            // get context to draw 2d 
+                var ctx = canvas.getContext("2d");
+                if (ctx) {
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = "#f00";
+                    ctx.beginPath();
+                    ctx.moveTo(20, 130);
+                    ctx.lineTo(230, 20);
+                    ctx.stroke();
+                }
+
+            }
+        }
+    </script>
+
+
+</body>
+</html>

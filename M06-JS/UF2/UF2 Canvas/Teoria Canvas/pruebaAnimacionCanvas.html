@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lienzo{
+            border-style:solid;
+            border-color: #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <canvas id="lienzo" width="600" height="600"></canvas>
+
+    <script>
+
+        var containerCanvas = document.getElementById("lienzo");
+
+        var ctx = containerCanvas.getContext("2d");
+        
+        var x = containerCanvas.width/2;
+        var y = -1;
+
+        if(ctx){
+
+            // pintarCercle();
+
+            requestAFrame(pintarCercle)
+
+        }
+
+        function pintarCercle(){
+            borrarCanvas();
+            cercle(x,y);
+            y++;
+            requestAFrame(pintarCercle);
+        }
+
+        function cercle(X, Y){
+            // var X = containerCanvas.width/2;
+            // var Y = -75;
+            var r = 75;
+            ctx.strokeStyle = "#006400";
+            ctx.fillStyle = "#6ab150";
+            ctx.lineWidth = 5;
+            ctx.arc(X,Y,r,0,2*Math.PI);
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        function borrarCanvas(){
+
+        }
+
+        function requestAFrame(pintarCercle){
+            
+        }
+
+    </script>
+
+</body>
+</html>
